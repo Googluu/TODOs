@@ -1,3 +1,5 @@
+import { CrossIcon } from "./components/icons/CrossIcon";
+
 function App() {
   return (
     <div className="min-h-screen  bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-no-repeat">
@@ -22,17 +24,23 @@ function App() {
           <article>
             <button className="inline-block h-5 w-5 rounded-full border-2"></button>
             <p className="text-gray-600">Complete the course</p>
-            <button>exiss</button>
+            <button>
+              <CrossIcon />
+            </button>
           </article>
           <article>
-            <button>Circulo</button>
-            <p>Complete the course</p>
-            <button>exiss</button>
+            <button className="inline-block h-5 w-5 rounded-full border-2"></button>
+            <p className="text-gray-600">Complete the course</p>
+            <button>
+              <CrossIcon />
+            </button>
           </article>
           <article>
-            <button>Circulo</button>
-            <p>Complete the course</p>
-            <button>exiss</button>
+            <button className="inline-block h-5 w-5 rounded-full border-2"></button>
+            <p className="text-gray-600">Complete the course</p>
+            <button>
+              <CrossIcon />
+            </button>
           </article>
         </div>
 
