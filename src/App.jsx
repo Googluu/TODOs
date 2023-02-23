@@ -50,13 +50,17 @@ function App() {
         </div>
       </main>
 
-      <section className="container mx-auto px-4">
-        <button>All</button>
-        <button>Active</button>
-        <button>Completed</button>
+      <section className="container mx-auto mt-8 px-4">
+        <div className="flex justify-center gap-4 rounded-md bg-white p-4">
+          <button className="text-blue-600">All</button>
+          <button className="hover:text-blue-600">Active</button>
+          <button className="hover:text-blue-600">Completed</button>
+        </div>
       </section>
 
-      <p className="text-center">Drag and drop to recorder list</p>
+      <p className="mt-8 text-center text-gray-400">
+        Drag and drop to recorder list
+      </p>
     </div>
   );
 }
