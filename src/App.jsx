@@ -18,21 +18,23 @@ function App() {
         </form>
       </header>
       <main className="container mx-auto mt-8 px-4">
-        <article>
-          <button>Circulo</button>
-          <p>Complete the course</p>
-          <button>exiss</button>
-        </article>
-        <article>
-          <button>Circulo</button>
-          <p>Complete the course</p>
-          <button>exiss</button>
-        </article>
-        <article>
-          <button>Circulo</button>
-          <p>Complete the course</p>
-          <button>exiss</button>
-        </article>
+        <div className="rounded-md bg-white px-4">
+          <article>
+            <button className="inline-block h-5 w-5 rounded-full border-2"></button>
+            <p className="text-gray-600">Complete the course</p>
+            <button>exiss</button>
+          </article>
+          <article>
+            <button>Circulo</button>
+            <p>Complete the course</p>
+            <button>exiss</button>
+          </article>
+          <article>
+            <button>Circulo</button>
+            <p>Complete the course</p>
+            <button>exiss</button>
+          </article>
+        </div>
 
         <section>
           <span>5 items left</span>
