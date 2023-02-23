@@ -20,34 +20,34 @@ function App() {
         </form>
       </header>
       <main className="container mx-auto mt-8 px-4">
-        <div className="rounded-md bg-white">
-          <article className="flex gap-4 border-b border-b-gray-300 py-4 px-4">
+        <div className="rounded-md bg-white [&>article]:px-4">
+          <article className="flex gap-4 border-b border-b-gray-300 py-4">
             <button className="inline-block h-5 w-5 flex-none rounded-full border-2"></button>
             <p className="grow text-gray-600">Complete the course</p>
             <button className="flex-none">
               <CrossIcon />
             </button>
           </article>
-          <article className="flex gap-4 border-b border-b-gray-300 py-4 px-4">
+          <article className="flex gap-4 border-b border-b-gray-300 py-4">
             <button className="inline-block h-5 w-5 flex-none rounded-full border-2"></button>
             <p className="grow text-gray-600">Complete the course</p>
             <button className="flex-none">
               <CrossIcon />
             </button>
           </article>
-          <article className="flex gap-4 border-b border-b-gray-300 py-4 px-4">
+          <article className="flex gap-4 border-b border-b-gray-300 py-4">
             <button className="inline-block h-5 w-5 flex-none rounded-full border-2"></button>
             <p className="grow text-gray-600">Complete the course</p>
             <button className="flex-none">
               <CrossIcon />
             </button>
           </article>
-        </div>
 
-        <section>
-          <span>5 items left</span>
-          <button>Clear Completed</button>
-        </section>
+          <section className="flex justify-between py-4 px-4">
+            <span className="text-gray-400">5 items left</span>
+            <button className="text-gray-400">Clear Completed</button>
+          </section>
+        </div>
       </main>
 
       <section className="container mx-auto px-4">
