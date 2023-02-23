@@ -1,4 +1,5 @@
 import { CrossIcon } from "./components/icons/CrossIcon";
+import { MoonIcon } from "./components/icons/MoonIcon";
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
           <h1 className="text-3xl font-semibold uppercase  tracking-[0.4em] text-white">
             Todo
           </h1>
-          <button>Luna</button>
+          <button>
+            <MoonIcon />
+          </button>
         </div>
         <form className="mt-8 flex items-center gap-4 overflow-hidden rounded-md bg-white py-4 px-4">
           <span className="inline-block h-5 w-5 rounded-full border-2"></span>
