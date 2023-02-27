@@ -13,7 +13,10 @@ function App() {
             <MoonIcon className="fill-red-500" />
           </button>
         </div>
-        <form className="mt-8 flex items-center gap-4 overflow-hidden rounded-md bg-white py-4 px-4">
+      </header>
+      <main className="container mx-auto mt-8 px-4">
+        {/* TodoCreate */}
+        <form className="flex items-center gap-4 overflow-hidden rounded-md bg-white py-4 px-4">
           <span className="inline-block h-5 w-5 rounded-full border-2"></span>
           <input
             type="text"
@@ -21,9 +24,8 @@ function App() {
             className="w-full text-gray-400 outline-none"
           />
         </form>
-      </header>
-      <main className="container mx-auto mt-8 px-4">
-        <div className="rounded-md bg-white [&>article]:px-4">
+        {/* TodoList */}
+        <div className="mt-8 rounded-t-md bg-white [&>article]:px-4">
           <article className="flex gap-4 border-b border-b-gray-300 py-4">
             <button className="inline-block h-5 w-5 flex-none rounded-full border-2"></button>
             <p className="grow text-gray-600">Complete the course</p>
@@ -45,25 +47,25 @@ function App() {
               <CrossIcon />
             </button>
           </article>
-
-          <section className="flex justify-between py-4 px-4">
-            <span className="text-gray-400">5 items left</span>
-            <button className="text-gray-400">Clear Completed</button>
-          </section>
         </div>
+        {/* TodoComputed */}
+        <section className="flex justify-between rounded-b-md bg-white py-4 px-4">
+          <span className="text-gray-400">5 items left</span>
+          <button className="text-gray-400">Clear Completed</button>
+        </section>
+        {/* TodoFilter */}
+        <section className="container mx-auto mt-8">
+          <div className="flex justify-center gap-4 rounded-md bg-white p-4">
+            <button className="text-blue-600">All</button>
+            <button className="hover:text-blue-600">Active</button>
+            <button className="hover:text-blue-600">Completed</button>
+          </div>
+        </section>
       </main>
 
-      <section className="container mx-auto mt-8 px-4">
-        <div className="flex justify-center gap-4 rounded-md bg-white p-4">
-          <button className="text-blue-600">All</button>
-          <button className="hover:text-blue-600">Active</button>
-          <button className="hover:text-blue-600">Completed</button>
-        </div>
-      </section>
-
-      <p className="mt-8 text-center text-gray-400">
+      <footer className="mt-8 text-center text-gray-400">
         Drag and drop to recorder list
-      </p>
+      </footer>
     </div>
   );
 }
