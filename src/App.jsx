@@ -31,7 +31,7 @@ function App() {
   const createTodo = (title) => {
     const newTodo = {
       id: Date.now(),
-      title,
+      title: title.trim(),
       completed: false,
     };
     setTodos([...todos, newTodo]);
