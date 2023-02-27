@@ -1,4 +1,4 @@
-import { MoonIcon } from "./icons/MoonIcon";
+import { MoonIcon } from "./";
 
 export const Header = () => {
   return (
