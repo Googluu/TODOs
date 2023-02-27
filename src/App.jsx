@@ -10,7 +10,7 @@ function App() {
             Todo
           </h1>
           <button>
-            <MoonIcon fill="#fff" />
+            <MoonIcon className="fill-red-500" />
           </button>
         </div>
         <form className="mt-8 flex items-center gap-4 overflow-hidden rounded-md bg-white py-4 px-4">
