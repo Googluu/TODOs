@@ -1,8 +1,9 @@
 import { CrossIcon, IconCheck } from "./";
 
 export const TodoItem = ({ todo: { title, id, completed } }) => {
-  const p = `inline-block`;
-  const c = `grid place-items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500`;
+  const p = "inline-block";
+  const c =
+    "grid place-items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500";
 
   return (
     <article className="flex gap-4 border-b border-b-gray-300 py-4">
