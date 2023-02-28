@@ -1,10 +1,17 @@
 import { CrossIcon, IconCheck } from "./";
 
 export const TodoItem = ({ todo: { title, id, completed } }) => {
+  const p = `inline-block`;
+  const c = `grid place-items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500`;
+
   return (
     <article className="flex gap-4 border-b border-b-gray-300 py-4">
-      <button className="inline-block h-5 w-5 flex-none rounded-full border-2">
-        <IconCheck />
+      <button
+        className={`h-6 w-6 flex-none rounded-full border-2 ${
+          completed ? c : p
+        }`}
+      >
+        {completed && <IconCheck />}
       </button>
       <p className="grow text-gray-600">{title}</p>
       <button className="flex-none">
