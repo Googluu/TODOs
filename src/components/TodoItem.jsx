@@ -14,7 +14,13 @@ export const TodoItem = ({ todo: { title, id, completed } }) => {
       >
         {completed && <IconCheck />}
       </button>
-      <p className="grow text-gray-600">{title}</p>
+      <p
+        className={`grow text-gray-600 ${
+          completed && "text-gray-300 line-through"
+        }`}
+      >
+        {title}
+      </p>
       <button className="flex-none">
         <CrossIcon />
       </button>
