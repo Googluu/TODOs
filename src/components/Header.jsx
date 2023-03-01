@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { MoonIcon } from "./";
 import { IconSun } from "./";
 
-const initialStateDarkMode =
-  localStorage.getItem("theme") === "dark" ? true : false;
+const initialStateDarkMode = localStorage.getItem("theme") === "dark";
 
 export const Header = () => {
   const [darkMode, setDarkMode] = useState(initialStateDarkMode);
