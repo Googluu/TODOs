@@ -5,8 +5,6 @@ import { IconSun } from "./";
 export const Header = () => {
   const [darkMode, setDarkMode] = useState(true);
 
-  // const handleClickToggleTheme = () => {};
-
   return (
     <header className="container mx-auto px-4">
       <div className="flex justify-between">
