@@ -7,4 +7,5 @@ export * from "./TodoList";
 export * from "./icons/IconCheck";
 export * from "./icons/IconCross";
 export * from "./icons/IconMoon";
+export * from "./icons/IconSun";
 export * from "./index";
