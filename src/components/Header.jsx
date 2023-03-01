@@ -3,9 +3,9 @@ import { MoonIcon } from "./";
 import { IconSun } from "./";
 
 export const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
-  const handleClickToggleTheme = () => {};
+  // const handleClickToggleTheme = () => {};
 
   return (
     <header className="container mx-auto px-4">
@@ -13,8 +13,8 @@ export const Header = () => {
         <h1 className="mt-5 text-3xl font-semibold uppercase  tracking-[0.4em] text-white">
           Todo
         </h1>
-        <button className="mt-5" onClick={handleClickToggleTheme}>
-          <MoonIcon />
+        <button className="mt-5" onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? <IconSun /> : <MoonIcon />}
         </button>
       </div>
     </header>
