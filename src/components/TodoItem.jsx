@@ -10,7 +10,7 @@ export const TodoItem = ({
     "grid place-items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500";
 
   return (
-    <article className="flex gap-4 border-b border-b-gray-300 py-4">
+    <article className="flex gap-4 border-b border-b-gray-300 py-4 dark:bg-gray-800">
       <button
         className={`h-6 w-6 flex-none rounded-full border-2 ${
           completed ? c : p
@@ -20,7 +20,7 @@ export const TodoItem = ({
         {completed && <IconCheck />}
       </button>
       <p
-        className={`grow text-gray-600 ${
+        className={`grow text-gray-600 dark:text-gray-300 ${
           completed && "text-gray-300 line-through"
         }`}
       >

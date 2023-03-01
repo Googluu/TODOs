@@ -2,7 +2,6 @@ export const MoonIcon = ({ fill = "#fff", ...props }) => {
   return (
     <svg
       {...props}
-      className="fill-red-400"
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"
       width="26"
