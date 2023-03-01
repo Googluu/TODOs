@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Header,
   TodoForm,
@@ -7,23 +7,7 @@ import {
   TodoFilter,
 } from "./components";
 
-const initialState = [
-  {
-    id: 1,
-    title: "Todo #1",
-    completed: true,
-  },
-  {
-    id: 2,
-    title: "Todo #2",
-    completed: true,
-  },
-  {
-    id: 3,
-    title: "Todo #3",
-    completed: false,
-  },
-];
+const initialState = JSON.parse(localStorage.getItem("todos")) || [];
 
 function App() {
   const [todos, setTodos] = useState(initialState);
@@ -67,6 +51,10 @@ function App() {
   };
 
   const changeFilter = (e) => setFilter(e.target.value);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div className="min-h-screen bg-gray-300 bg-[url('./assets/images/bg-mobile-light.jpg')] bg-contain bg-no-repeat transition-all duration-1000 dark:bg-gray-900 dark:bg-[url('./assets/images/bg-mobile-dark.jpg')]">
