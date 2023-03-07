@@ -63,11 +63,13 @@ function App() {
       <Header />
       <main className="container mx-auto mt-8 px-4 md:max-w-xl">
         <TodoForm createTodo={createTodo} />
-        <TodoList
-          todos={filteredTodos()}
-          removeTodo={removeTodo}
-          updateTodo={updateTodo}
-        />
+        <DragDropContext>
+          <TodoList
+            todos={filteredTodos()}
+            removeTodo={removeTodo}
+            updateTodo={updateTodo}
+          />
+        </DragDropContext>
         <TodoComputed
           computedItemsLeft={computedItemsLeft}
           clearComputed={clearComputed}
