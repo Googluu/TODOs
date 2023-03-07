@@ -19,6 +19,8 @@ export const TodoList = ({ todos, removeTodo, updateTodo }) => {
                   removeTodo={removeTodo}
                   updateTodo={updateTodo}
                   ref={draggableProvider.innerRef}
+                  {...draggableProvider.dragHandleProps}
+                  {...draggableProvider.draggableProps}
                 />
               )}
             </Draggable>

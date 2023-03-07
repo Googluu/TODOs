@@ -11,6 +11,14 @@ import {
 
 const initialState = JSON.parse(localStorage.getItem("todos")) || [];
 
+const reorder = (list, startIndex, endIndex) => {
+  const result = [...list];
+  const [remove] = result.splice(startIndex, 1);
+  result.splice(endIndex, 0, remove);
+
+  return result;
+};
+
 function App() {
   const [todos, setTodos] = useState(initialState);
   const [filter, setFilter] = useState("all");
@@ -54,6 +62,20 @@ function App() {
 
   const changeFilter = (e) => setFilter(e.target.value);
 
+  const handleDragEnd = (result) => {
+    const { destination, source } = result;
+    if (!destination) return;
+    if (
+      source.index === destination.index &&
+      source.droppableId === destination.droppableId
+    )
+      return;
+
+    setTodos((prevTasks) =>
+      reorder(prevTasks, source.index, destination.index)
+    );
+  };
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -63,7 +85,7 @@ function App() {
       <Header />
       <main className="container mx-auto mt-8 px-4 md:max-w-xl">
         <TodoForm createTodo={createTodo} />
-        <DragDropContext>
+        <DragDropContext onDragEnd={handleDragEnd}>
           <TodoList
             todos={filteredTodos()}
             removeTodo={removeTodo}
