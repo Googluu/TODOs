@@ -6,7 +6,11 @@ export const TodoList = ({ todos, removeTodo, updateTodo }) => {
   return (
     <Droppable droppableId="todos">
       {(droppableProvider) => (
-        <div className="mt-8 overflow-hidden rounded-t-md bg-white transition-all duration-1000 dark:bg-gray-800 [&>article]:p-4">
+        <div
+          className="mt-8 overflow-hidden rounded-t-md bg-white transition-all duration-1000 dark:bg-gray-800 [&>article]:p-4"
+          ref={droppableProvider.innerRef}
+          {...droppableProvider.droppableProps}
+        >
           {todos.map((todo) => (
             <TodoItem
               key={todo.id}
@@ -15,6 +19,7 @@ export const TodoList = ({ todos, removeTodo, updateTodo }) => {
               updateTodo={updateTodo}
             />
           ))}
+          {droppableProvider.placeholder}
         </div>
       )}
     </Droppable>
