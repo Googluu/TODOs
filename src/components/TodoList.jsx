@@ -11,13 +11,17 @@ export const TodoList = ({ todos, removeTodo, updateTodo }) => {
           ref={droppableProvider.innerRef}
           {...droppableProvider.droppableProps}
         >
-          {todos.map((todo) => (
-            <TodoItem
-              key={todo.id}
-              todo={todo}
-              removeTodo={removeTodo}
-              updateTodo={updateTodo}
-            />
+          {todos.map((todo, index) => (
+            <Draggable key={todo.id} index={index} draggableId={`${todo.id}`}>
+              {(draggableProvider) => (
+                <TodoItem
+                  todo={todo}
+                  removeTodo={removeTodo}
+                  updateTodo={updateTodo}
+                  ref={draggableProvider.innerRef}
+                />
+              )}
+            </Draggable>
           ))}
           {droppableProvider.placeholder}
         </div>
